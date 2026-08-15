@@ -1,7 +1,7 @@
 from collections import Counter
 class Solution:
     def maxDifference(self, s: str) -> int:
-        freq_s = Counter(s)
-        odd_freq = [val for val in freq_s.values() if val%2!=0]
-        even_freq = [val for val in freq_s.values() if val%2==0]
-        return max(odd_freq) - min(even_freq)
+        f = Counter(s)
+        odd_f = [val for val in f.values() if val%2 != 0]
+        even_f = [val for val in f.values() if val%2 == 0]
+        return max(odd_f) - min(even_f)
